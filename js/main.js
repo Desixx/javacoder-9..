@@ -148,7 +148,7 @@ if (selectMeses) {
 }
 
 const calcularDescuentoPorPlazo = (subtotalBruto, meses) => {
-    // Ejemplo de uso de switch estricto y limpio, llamando funciones y sin lógica interna saturada
+    
     switch (meses) {
         case 6:
             return subtotalBruto * 0.10;
