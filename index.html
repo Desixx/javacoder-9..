@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Contratación de Planes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Simulador de Contratación de Servicios</h1>
+
+        <div id="mensaje-estado" class="estado-mensaje"></div>
+
+        <section class="catalog-section">
+            <h2>1. Seleccioná tu Plan Base</h2>
+            <div id="contenedor-planes"></div>
+        </section>
+
+        <section class="extras-section" id="seccion-extras" style="display: none;">
+            <h2>2. Personalizá tu Plan con Adicionales y Plazo</h2>
+            <div id="contenedor-extras">
+                <label>
+                    <input type="checkbox" class="input-extra" value="500" data-nombre="Soporte Prioritario 24/7"> Soporte Prioritario 24/7 (+$500)
+                </label>
+                <label>
+                    <input type="checkbox" class="input-extra" value="800" data-nombre="Almacenamiento Cloud Extra"> Almacenamiento Cloud Extra (+$800)
+                </label>
+                <label>
+                    <input type="checkbox" class="input-extra" value="1200" data-nombre="Asesoramiento Personalizado"> Asesoramiento Personalizado (+$1200)
+                </label>
+            </div>
+            
+            <div class="plazo-section" style="margin-top: 15px;">
+                <label for="select-meses"><strong>Tiempo de contratación:</strong></label>
+                <select id="select-meses">
+                    <option value="1">1 Mes</option>
+                    <option value="6">6 Meses (10% OFF)</option>
+                    <option value="12">12 Meses (20% OFF)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <h2>3. Resumen y Carrito de Contratación</h2>
+            <div id="resumen-carrito">
+                <p>No hay ninguna contratación en proceso.</p>
+            </div>
+            <div id="desglose-precio" style="font-weight: bold; margin-top: 10px;"></div>
+            <button id="btn-contratar" style="display: none; margin-top: 15px;">Confirmar Alta del Servicio</button>
+        </section>
+    </main>
+</body>
+</html>
